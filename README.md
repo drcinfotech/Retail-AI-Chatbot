@@ -327,6 +327,6 @@ MIT — see [LICENSE](LICENSE). Free to fork, modify, and use commercially.
 
 ## 🙏 Credits & Notes
 
-- Product brand names (Mejuri, Sézane, Areaware, etc.) and tracking IDs are used for **demonstration realism only** — this project is not affiliated with any of them.
+- All product brand names, product models, and tracking IDs in this project are **entirely fictional**. Any resemblance to real brands or products is coincidental.
 - Lume, the bot persona, is fictional.
 - Built as a teaching demo for full-stack conversational AI architecture.

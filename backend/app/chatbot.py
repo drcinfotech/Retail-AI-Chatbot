@@ -211,7 +211,7 @@ def _handle_checkout(session: Session) -> tuple[list[dict], list[str]]:
         _build_text(
             f"Ready to check out. Total comes to ₹{total:,} "
             f"({len(session.cart)} item(s){'  · free shipping' if total >= FREE_SHIPPING_THRESHOLD else ''}). "
-            "I'll use your saved address and HDFC card ending 4421 unless you want to change something."
+            "I'll use your saved address and the card ending 4421 unless you want to change something."
         ),
         _build_cart(session),
     ]
@@ -240,11 +240,11 @@ def _handle_shipping(_session: Session) -> tuple[list[dict], list[str]]:
 def _handle_size_help(_session: Session) -> tuple[list[dict], list[str]]:
     blocks = [_build_text(
         "Most of our brands run true to size, but a few quirks worth knowing: "
-        "Mejuri runs slightly small (size up if you're between), Uniqlo runs true, "
-        "and Veja sneakers are 1/2 size large — order down. Share the product and "
+        "Marisol Studio runs slightly small (size up if you're between), Threadline runs true, "
+        "and Soleva sneakers are 1/2 size large — order down. Share the product and "
         "your usual size, and I'll give you a confident pick."
     )]
-    return blocks, ["Mejuri sizing", "Uniqlo sizing", "Veja sizing", "Show size chart"]
+    return blocks, ["Marisol Studio sizing", "Threadline sizing", "Soleva sizing", "Show size chart"]
 
 
 def _handle_talk_to_human(_session: Session) -> tuple[list[dict], list[str]]:
