@@ -32,7 +32,7 @@ A production-shaped demo of an AI chatbot built specifically for retail and e-co
 ![Demo](docs/screenshots/05-demo.gif)
 -->
 
-> 📷 **Screenshots pending** — see [`docs/screenshots/README.md`](docs/screenshots/README.md) for a checklist of what to capture once you have the app running.
+> 📷 **Screenshots pending** — see [`(https://github.com/drcinfotech/Retail-AI-Chatbot/tree/main/docs/screenshots)`]((https://github.com/drcinfotech/Retail-AI-Chatbot/tree/main/docs/screenshots)) for a checklist of what to capture once you have the app running.
 
 ---
 
