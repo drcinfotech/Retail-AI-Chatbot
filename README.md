@@ -1,4 +1,4 @@
-# Retail AI Chatbot
+# DRC Retail AI Chatbot
 
 > A full-stack conversational AI shopping assistant — **Python FastAPI backend** + **React frontend**.
 
@@ -10,7 +10,7 @@
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-A production-shaped demo of an AI chatbot built specifically for retail and e-commerce. The bot, *Lume*, can find products with natural-language filters, manage a real cart, track orders with a visual timeline, apply discount codes, handle returns, and gracefully fall back when confused. Everything runs locally with **zero external API keys**.
+A production-shaped demo of an AI chatbot built specifically for retail and e-commerce. The bot, *DRC*, can find products with natural-language filters, manage a real cart, track orders with a visual timeline, apply discount codes, handle returns, and gracefully fall back when confused. Everything runs locally with **zero external API keys**.
 
 ## 📸 Preview
 
@@ -339,5 +339,5 @@ MIT — see [LICENSE](LICENSE). Free to fork, modify, and use commercially.
 ## 🙏 Credits & Notes
 
 - All product brand names, product models, and tracking IDs in this project are **entirely fictional**. Any resemblance to real brands or products is coincidental.
-- Lume, the bot persona, is fictional.
+- DRC, the bot persona, is fictional.
 - Built as a teaching demo for full-stack conversational AI architecture.
