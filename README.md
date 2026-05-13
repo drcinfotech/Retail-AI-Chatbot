@@ -2,7 +2,37 @@
 
 > A full-stack conversational AI shopping assistant — **Python FastAPI backend** + **React frontend**.
 
+[![CI](https://github.com/drcinfotech/Retail-AI-Chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/drcinfotech/Retail-AI-Chatbot/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-FF6B9D.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Node](https://img.shields.io/badge/Node-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
 A production-shaped demo of an AI chatbot built specifically for retail and e-commerce. The bot, *Lume*, can find products with natural-language filters, manage a real cart, track orders with a visual timeline, apply discount codes, handle returns, and gracefully fall back when confused. Everything runs locally with **zero external API keys**.
+
+## 📸 Preview
+
+<!-- Drop your captured screenshots into docs/screenshots/ and uncomment these.
+     See docs/screenshots/README.md for capture guidance. -->
+
+<!--
+![Chat interface](docs/screenshots/01-hero.png)
+
+<details>
+<summary>More screenshots</summary>
+
+![Product search](docs/screenshots/02-product-search.png)
+![Cart](docs/screenshots/03-cart.png)
+![Order tracking](docs/screenshots/04-order-tracking.png)
+
+</details>
+
+![Demo](docs/screenshots/05-demo.gif)
+-->
+
+> 📷 **Screenshots pending** — see [`docs/screenshots/README.md`](docs/screenshots/README.md) for a checklist of what to capture once you have the app running.
 
 ---
 
@@ -47,7 +77,19 @@ Each response can include **rich blocks** — text, product grids, cart cards, o
 
 ## 🚀 Quick Start
 
-You need **two terminals** open — one for the Python backend, one for the React frontend.
+### Option A — Docker (fastest, one command)
+
+```bash
+docker compose up --build
+```
+
+Then open **http://localhost:5173** in your browser. The backend's interactive API docs live at **http://localhost:8000/docs**. Stop with `Ctrl+C` or `docker compose down`.
+
+This builds both containers, starts them, wires up the internal network, and runs healthchecks. You need only [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
+
+### Option B — Manual (two terminals)
+
+If you'd rather run the stack natively for hot-reload dev work, you need **two terminals** open — one for the Python backend, one for the React frontend.
 
 ### Prerequisites
 - **Python 3.10+** ([python.org](https://www.python.org/))
@@ -105,12 +147,26 @@ The browser opens automatically to **http://localhost:5173**. Vite is configured
 ```
 retail-ai-chatbot/
 ├── README.md                    ← You are here
-├── LICENSE                      ← MIT
+├── CONTRIBUTING.md              Dev setup + style guide
+├── LICENSE                      MIT
 ├── .gitignore
+├── .dockerignore
+├── docker-compose.yml           One-command full-stack launch
+│
+├── .github/
+│   ├── workflows/ci.yml         GitHub Actions — tests + build matrix
+│   ├── ISSUE_TEMPLATE/          Bug report + feature request templates
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── docs/
+│   └── screenshots/             Drop preview images here
 │
 ├── backend/                     ← Python FastAPI server
+│   ├── Dockerfile               Production-ready container
+│   ├── .env.example             Configurable settings
 │   ├── main.py                 Entry point + routes
 │   ├── requirements.txt        Dependencies
+│   ├── test_chatbot.py         21 smoke tests
 │   ├── app/
 │   │   ├── __init__.py
 │   │   ├── chatbot.py          ChatbotEngine + intent handlers
@@ -123,9 +179,12 @@ retail-ai-chatbot/
 │                               electronics, beauty, home, etc.)
 │
 └── frontend/                   ← React + Vite + Tailwind
+    ├── Dockerfile              Multi-stage: build with Node, serve with nginx
+    ├── nginx.conf              SPA fallback + /api proxy to backend
+    ├── .env.example            VITE_API_BASE for production deploys
     ├── index.html
     ├── package.json
-    ├── vite.config.js          Includes /api → :8000 proxy
+    ├── vite.config.js          Dev: /api → :8000 proxy
     ├── tailwind.config.js
     ├── postcss.config.js
     ├── public/favicon.svg
