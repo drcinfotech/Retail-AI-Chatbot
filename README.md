@@ -32,7 +32,18 @@ A production-shaped demo of an AI chatbot built specifically for retail and e-co
 ![Demo](docs/screenshots/05-demo.gif)
 -->
 
-> 📷 **Screenshots pending** — see [`(https://github.com/drcinfotech/Retail-AI-Chatbot/tree/main/docs/screenshots)`]((https://github.com/drcinfotech/Retail-AI-Chatbot/tree/main/docs/screenshots)) for a checklist of what to capture once you have the app running.
+   ![Chat interface](docs/screenshots/01-hero.png)
+
+   <details>
+   <summary>More screenshots</summary>
+
+   ![Product search](docs/screenshots/02-product-search.png)
+   ![Cart](docs/screenshots/03-cart.png)
+   ![Order tracking](docs/screenshots/04-order-tracking.png)
+
+   </details>
+
+   ![Demo](docs/screenshots/05-demo.gif)
 
 ---
 
